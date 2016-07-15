@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'about', to: 'pages#about'
+
+  # generate all paths available to CRUD articles
+  resources :articles
 end
