@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   # generate all paths available to CRUD articles
   resources :articles
+
+  # change signup page from default /users/new to /signup
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
 end
